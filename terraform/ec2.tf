@@ -47,7 +47,7 @@ resource "aws_instance" "ConanNode" {
   ami                         = local.conan_image_id
   iam_instance_profile        = aws_iam_instance_profile.CompilerExplorerRole.name
   ebs_optimized               = false
-  instance_type               = "t3a.small"
+  instance_type               = "t3a.medium"
   monitoring                  = false
   key_name                    = "mattgodbolt"
   subnet_id                   = local.admin_subnet

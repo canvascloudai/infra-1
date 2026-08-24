@@ -16,7 +16,8 @@ resource "aws_s3_bucket" "temp_storage" {
   tags = merge(
     local.temp_storage_common_tags,
     {
-      Name = local.temp_storage_bucket_name
+      Name      = local.temp_storage_bucket_name
+      FieldTest = "cwm"
     }
   )
 
